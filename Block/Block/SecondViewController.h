@@ -10,6 +10,6 @@
 typedef void(^CallbackColor)(UIColor *color);
 
 @interface SecondViewController : UIViewController
-@property (nonatomic, strong)CallbackColor changedColor;
+@property (nonatomic, copy)CallbackColor changedColor;
 - (void)returnColor:(CallbackColor)color;
 @end

@@ -28,6 +28,8 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 - (void)returnColor:(CallbackColor)color{
+    //将viewcontroller传进来的block传给本类的block属性
+    //等待一个适当时机调用（button点击事件）
     self.changedColor = color;
 }
 @end
