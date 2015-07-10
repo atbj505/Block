@@ -10,6 +10,8 @@
 
 @interface ViewController ()
 
+@property (nonatomic, strong) UILabel *textLabel;
+
 @end
 
 @implementation ViewController
@@ -20,6 +22,14 @@ typedef NSString* (^IntToStringConverter)(NSUInteger paramInteger);
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.title = @"ViewControllerA";
+    
+    self.textLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 30)];
+    self.textLabel.center = self.view.center;
+    self.textLabel.textAlignment = NSTextAlignmentCenter;
+    [self.view addSubview:self.textLabel];
+    
     // 独立Block 使用方式
     // 1.定义Block并调用
     NSString *(^intToString)(NSUInteger) = ^(NSUInteger paramInteger) {
@@ -85,14 +95,10 @@ typedef NSString* (^IntToStringConverter)(NSUInteger paramInteger);
     return paramBlockObject(paramInteger);
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     SecondViewController *secondVC = [[SecondViewController alloc]init];
-    [secondVC returnColor:^(UIColor *color) {
-        self.view.backgroundColor = color;
+    [secondVC returnString:^(NSString *secondString) {
+        self.textLabel.text = secondString;
     }];
     [self.navigationController pushViewController:secondVC animated:YES];
 }

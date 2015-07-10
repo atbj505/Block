@@ -7,6 +7,7 @@
 //
 
 #import "SecondViewController.h"
+#import "ThirdViewController.h"
 #import "UIColor+randomColor.h"
 
 @interface SecondViewController ()
@@ -17,19 +18,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.btn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 150, 150)];
-    self.btn.center = self.view.center;
-    self.btn.backgroundColor = [UIColor randomColor];
-    [self.btn addTarget:self action:@selector(changeColor:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:self.btn];
+    self.title = @"ViewControllerB";
 }
-- (void)changeColor:(UIButton *)btn{
-    self.changedColor(btn.backgroundColor);
-    [self.navigationController popViewControllerAnimated:YES];
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    ThirdViewController *third = [[ThirdViewController alloc] init];
+    [third returnString:self.secondString];
+    [self.navigationController pushViewController:third animated:YES];
 }
-- (void)returnColor:(CallbackColor)color{
+
+- (void)returnString:(Callback)string{
     //将viewcontroller传进来的block传给本类的block属性
     //等待一个适当时机调用（button点击事件）
-    self.changedColor = color;
+    self.secondString = string;
 }
 @end

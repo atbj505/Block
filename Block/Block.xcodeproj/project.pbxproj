@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		57607BBB1B4F675D00C89F2B /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57607BBA1B4F675D00C89F2B /* ThirdViewController.m */; };
 		57B6C4601AA41ABF0055EDCA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B6C45F1AA41ABF0055EDCA /* main.m */; };
 		57B6C4631AA41ABF0055EDCA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B6C4621AA41ABF0055EDCA /* AppDelegate.m */; };
 		57B6C4661AA41ABF0055EDCA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B6C4651AA41ABF0055EDCA /* ViewController.m */; };
@@ -27,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		57607BB91B4F675D00C89F2B /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
+		57607BBA1B4F675D00C89F2B /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
 		57B6C45A1AA41ABF0055EDCA /* Block.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Block.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57B6C45E1AA41ABF0055EDCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		57B6C45F1AA41ABF0055EDCA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -92,6 +95,8 @@
 				57B6C4651AA41ABF0055EDCA /* ViewController.m */,
 				57B6C4841AA41C210055EDCA /* SecondViewController.h */,
 				57B6C4851AA41C210055EDCA /* SecondViewController.m */,
+				57607BB91B4F675D00C89F2B /* ThirdViewController.h */,
+				57607BBA1B4F675D00C89F2B /* ThirdViewController.m */,
 				57B6C46A1AA41ABF0055EDCA /* Images.xcassets */,
 				57B6C45D1AA41ABF0055EDCA /* Supporting Files */,
 			);
@@ -225,6 +230,7 @@
 			files = (
 				57B6C4861AA41C210055EDCA /* SecondViewController.m in Sources */,
 				57B6C4661AA41ABF0055EDCA /* ViewController.m in Sources */,
+				57607BBB1B4F675D00C89F2B /* ThirdViewController.m in Sources */,
 				57B6C4631AA41ABF0055EDCA /* AppDelegate.m in Sources */,
 				57B6C4891AA429BF0055EDCA /* UIColor+randomColor.m in Sources */,
 				57B6C4601AA41ABF0055EDCA /* main.m in Sources */,
@@ -405,6 +411,7 @@
 				57B6C47F1AA41ABF0055EDCA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		57B6C4801AA41ABF0055EDCA /* Build configuration list for PBXNativeTarget "BlockTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +420,7 @@
 				57B6C4821AA41ABF0055EDCA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

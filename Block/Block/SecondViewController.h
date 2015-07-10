@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-typedef void(^CallbackColor)(UIColor *color);
+typedef void(^Callback)(NSString *secondString);
 
 @interface SecondViewController : UIViewController
-@property (nonatomic, copy)CallbackColor changedColor;
-- (void)returnColor:(CallbackColor)color;
+
+@property (nonatomic, copy)Callback secondString;
+
+- (void)returnString:(Callback)string;
+
 @end
